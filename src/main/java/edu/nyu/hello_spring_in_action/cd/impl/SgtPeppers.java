@@ -1,11 +1,21 @@
 package edu.nyu.hello_spring_in_action.cd.impl;
 
+import edu.nyu.hello_spring_in_action.annotation.American;
 import edu.nyu.hello_spring_in_action.cd.CompactDisc;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
-
+/*
+*
+* Try to use @Value  @Primary
+*
+* */
 @Component
+@Primary
+@American
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class SgtPeppers implements CompactDisc {
 
     //    private String title = "sgt. pepper";

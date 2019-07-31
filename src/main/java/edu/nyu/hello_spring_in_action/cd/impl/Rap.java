@@ -1,13 +1,15 @@
 package edu.nyu.hello_spring_in_action.cd.impl;
 
+import edu.nyu.hello_spring_in_action.annotation.Chinese;
 import edu.nyu.hello_spring_in_action.cd.CompactDisc;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
-
+/*
+* Try to use Properties
+* */
+@Chinese
 @Component
 @ConfigurationProperties(prefix = "rap")
 @PropertySource(value = "config.properties")
@@ -25,7 +27,7 @@ public class Rap implements CompactDisc {
 
     @Override
     public String toString() {
-        return "Rap{" +
+        return "American{" +
                 "artist='" + artist + '\'' +
                 ", title='" + title + '\'' +
                 '}';
