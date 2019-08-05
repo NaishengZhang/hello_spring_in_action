@@ -9,6 +9,8 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix = "jazz")
 @PropertySource(value = "config.properties")
+
+//@AnnotationTest(value1 = "jazz")
 public class Jazz implements CompactDisc {
     private String title;
     private String artist;
